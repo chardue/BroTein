@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>14-Day Workout Plan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2));
+      background-image: url('gymbg.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .cards-container-wrapper {
+      max-width: 950px;
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      color: #bdbfc0;
+      margin-bottom: 30px;
+      background-color: black;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .card {
+      background: rgb(184, 180, 180);
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 180px;
+      padding: 15px;
+      box-sizing: border-box;
+      text-align: left;
+      user-select: none;
+      cursor: pointer;
+      position: relative;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .card.done {
+      background-color: #e9dec1;
+      color: white;
+      font-weight: bold;
+    }
+
+    .card.done::after {
+      content: "✅";
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.5rem;
+    }
+
+    .card h3 {
+      margin-top: 10px;
+      color: inherit;
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .exercise-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .exercise-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .exercise-item img {
+      width: 50px;
+      height: 50px;
+      border-radius: 6px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .exercise-item p {
+      margin: 0;
+      font-weight: inherit;
+      color: inherit;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .cards-container {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cards-container-wrapper">
+    <h1>14-Days Workout Plan</h1>
+    <div id="cardsContainer" class="cards-container">
+
+      <div id="cardsContainer" class="cards-container">
+      <div class="card" id="day1">
+        <h3>Day 1</h3>
+        <p> Full Body strength</p> 
+        <p>3 sets each</p>
+        <div class="exercise-list">
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/squats.jpg" alt="Push-ups" />
+            <p>Squats: 15reps</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/pushups.jpg" alt="Plank" />
+            <p>Push-ups (knee or full): 12reps</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/bent over rows.jpg" alt="Jumping Jacks" />
+            <p>Bent-over rows (dumbbell): 12reps</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/planks.jpg" alt="Jumping Jacks" />
+            <p>Planks: 30sec</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="card" id="day2">
+        <h3>Day 2</h3>
+        <p>HIIT Cardio</p>
+        <p>5 rounds (40s work/20s rest)</p>
+        <div class="exercise-list">
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/jumpingsquats.png" alt="Push-ups" />
+            <p>Jump squats</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/mountain climbers.jpg" alt="Squats" />
+            <p>Mountain climbers</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/burpees.jpg" alt="Plank" />
+            <p>Burpees</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/jumpinglunges.jpg" alt="Jumping Jacks" />
+            <p>Jumping Lunges</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="day3">
+        <h3>Day 3</h3>
+        <p>Core & Mobility</p>
+        <p> 3 sets</p>
+        <div class="exercise-list">
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/crunches.jpg" alt="Push-ups" />
+            <p>Crunches: 20 reps</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/leg raise.jpg" alt="Squats" />
+            <p>Leg raise: 15reps</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/side planks.jpg" alt="Plank" />
+            <p>Side plank: 30 sec</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/yoga.jpg" alt="Jumping Jacks" />
+            <p>Yoga: 10min</p>
+          </div>
+        </div>
+      </div>
+
+       <div class="card" id="day4">
+        <h3>Day 4</h3>
+        <p>Lower Body</p>
+        <p> 4 sets</p>
+        <div class="exercise-list">
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/brisk walk.jpg" alt="Push-ups" />
+            <p>Deadlifs: 12reps</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/glutebridges.jpg" alt="Squats" />
+            <p>Glute bridges: 15reps</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/lunges.jpg" alt="Plank" />
+            <p>Lunges: 20reps</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/calf raises.jpg" alt="Plank" />
+            <p>Calf raises: 15reps</p>
+          </div>
+        </div>
+      </div>
+
+       <div class="card" id="day5">
+        <h3>Day 5</h3>
+        <p>Active Recovery</p>
+        <div class="exercise-list">
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/brisk walk.jpg" alt="Push-ups" />
+            <p>30 mins walk or jog + full body stretch or yoga</p>
+          </div>
+        </div>
+      </div>
+
+       <div class="card" id="day6">
+        <h3>Day 6</h3>
+        <p>Upper Body & Core</p>
+        <p> 3 sets </p>
+        <div class="exercise-list">
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/tricepdips.jpg" alt="Push-ups" />
+            <p>Tricep dips: 15reps</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/bycle.jpg" alt="Squats" />
+            <p>Bicycle crunches: 20reps</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/shoulder press.png" alt="Plank" />
+            <p>Shoulder Presses: 12reps</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/pull ups.jpg" alt="Jumping Jacks" />
+            <p>Pull-ups: 10reps</p>
+          </div>
+        </div>
+      </div>
+
+       <div class="card" id="day7">
+        <h3>Day 7</h3>
+        <p>Rest or Light Activity</p>
+        <div class="exercise-list">
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/brisk walk.jpg" alt="Push-ups" />
+            <p>Optional: Walk, foam rolling or gentle yoga. </p>
+          </div>
+          </div>
+        </div>
+      <div class="card" id="day8">
+        <h3>Day 8</h3>
+        <p>Full Body Compound Lifts</p>
+        <p> 3 sets</p>
+        <div class="exercise-list">
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/squats.jpg" alt="Push-ups" />
+            <p>Squats: 10reps</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/push press.jpg" alt="Squats" />
+            <p>Push press: 10reps</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/renegade rows.jpg" alt="Plank" />
+            <p>Renegade rows: 10reps</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/planks.jpg" alt="Jumping Jacks" />
+            <p>Plank: 1min</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="day9">
+        <h3>Day 9</h3>
+        <p>Cardio + Core</p>
+        <div class="exercise-list">
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/jogging.jpg" alt="Push-ups" />
+            <p>Jogging: 25mins (3 rounds)</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/russian twist.jpg" alt="Squats" />
+            <p>russian Twists: 20reps</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/leg raise.jpg" alt="Plank" />
+            <p>Leg raises: 15reps</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/hollow hold.png" alt="Jumping Jacks" />
+            <p>Hollow hold: 30sec</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="day10">
+        <h3>Day 10</h3>
+        <p>Lower Body Strength</p>
+        <p>4 sets</p>
+        <div class="exercise-list">
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/bulgarian squats.jpg" alt="Push-ups" />
+            <p>Bulgarian split squats: 10reps</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/kettle bell.jpg" alt="Squats" />
+            <p>Kettebell swings: 15reps</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/side leg raise.jpg" alt="Plank" />
+            <p>Side Leg raises: 20reps</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="day11">
+        <h3>Day 11</h3>
+        <p>Mobility & Flexibility</p>
+        <div class="exercise-list">
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/yoga.jpg" alt="Plank" />
+            <p>30 mins yoga flow: hip openers, hamstring & back stretches.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card" id="day12">
+        <h3>Day 12</h3>
+        <p>Upper Body Strength</p>
+        <p> 3 sets</p>
+        <div class="exercise-list">
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/biceps curls.jpg" alt="Push-ups" />
+            <p>Biceps curls: 12reps</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/bench press.jpg" alt="Squats" />
+            <p>Bench press: 12reps</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/inverted rows.jpg" alt="Plank" />
+            <p>Inverted rows: 10reps</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/pull ups.jpg" alt="Jumping Jacks" />
+            <p>Push-up hold: 30sec</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="day13">
+        <h3>Day 13</h3>
+        <p>HIIT + Core</p>
+        <P> 4 rounds: 45sec work/15sec rest</P>
+        <div class="exercise-list">
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/high knees.jpg" alt="Push-ups" />
+            <p>High knees</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/jumpingsquats.png" alt="Squats" />
+            <p>Jump Squats</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/skaters.jpg" alt="Plank" />
+            <p>Skaters</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/planks.jpg" alt="Jumping Jacks" />
+            <p>Planks</p>
+          </div>
+          <div class="exercise-item">
+            <img src="../beginner/beginner.c-images/jumpingjacks.jpg" alt="Jumping Jacks" />
+            <p>Jumping jacks: 1min (repeat 3 rounds)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="day14">
+        <h3>Day 14</h3>
+        <p>Rest & Recovery</p>
+        <div class="exercise-list">
+          <div class="exercise-item">
+            <p>Gentle walk, stretching, or rest day.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const doneStates = JSON.parse(localStorage.getItem('workoutDoneStates')) || {};
+
+    function updateCardState(dayNumber) {
+      const card = document.getElementById(`day${dayNumber}`);
+      if (doneStates[dayNumber]) {
+        card.classList.add('done');
+      }
+ 
+      card.addEventListener('click', () => {
+        card.classList.toggle('done');
+        doneStates[dayNumber] = card.classList.contains('done');
+        localStorage.setItem('workoutDoneStates', JSON.stringify(doneStates));
+      });
+    }
+
+    // Update the state for each day manually
+    for (let i = 1; i <= 14; i++) {
+      updateCardState(i);
+    }
+  </script>
+
+</body>
+</html>

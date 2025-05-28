@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('../beginner/dwayne.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    color: white;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.nav h1 i {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+    color: #ffd700;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+    letter-spacing: 2px;
+}
+
+.hero-text h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 48px;
+    color: #ff7b00;
+    margin-top: -10px;
+}
+
+.hero-text button {
+    margin-top: 30px;
+    padding: 14px 30px;
+    font-size: 16px;
+    background-color: #ffd700;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.hero-text button:hover {
+    background-color: #e6be00;
+}
+
+.challenge-plan {
+    padding: 130px 50px 60px;
+    color: white;
+}
+
+.challenge-title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 40px;
+    text-align: center;
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.challenge-intro {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.week {
+    background-color: rgba(20, 20, 20, 0.85);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.week h3 {
+    color: #ffcc00;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.week ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.week ul li::before {
+    content: "✔ ";
+    color: #ffd700;
+    margin-right: 6px;
+}
+
+.back-button {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.back-button a {
+    text-decoration: none;
+    color: #ffd700;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.back-button a {
+    margin-top: 30px;
+    padding: 14px 30px;
+    font-size: 16px;
+    background-color: #ffd700;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+
+/* Calendar Grid */
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Card Styling */
+.day-card {
+  position: relative;
+  background: linear-gradient(145deg, #3b3422, #343a40);
+  border-radius: 16px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: #ffc107;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  height: 120px; /* 🔧 Fixed height for uniformity */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Hover Effect */
+.day-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(255, 193, 7, 0.4);
+  z-index: 1;
+}
+
+/* Title */
+.day-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #ffffff;
+  text-shadow: 0 0 3px #ffc107;
+  z-index: 2;
+}
+
+/* Hidden Details */
+.day-details {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  color: #f8f9fa;
+  padding: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  transition: top 0.3s ease-in-out;
+  overflow-y: auto;
+  border-radius: 16px;
+  white-space: pre-wrap;
+  z-index: 3;
+}
+
+/* Show on Hover */
+.day-card:hover .day-details {
+  top: 0;
+}
+
+/* Scrollbar */
+.day-details::-webkit-scrollbar {
+  width: 6px;
+}
+.day-details::-webkit-scrollbar-thumb {
+  background-color: #ffc107;
+  border-radius: 10px;
+}
+
+.calendar-card {
+    padding: 40px; /* Increased padding for better spacing */
+    border-radius: 20px;
+    color: white;
+}
+
+.nav ul li a.active {
+  color: #ffd700; /* or #facc15 for a gold/yellow highlight */
+  font-weight: 400;
+}

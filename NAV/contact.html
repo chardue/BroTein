@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - BroTein Fitness</title>
+  <link rel="stylesheet" href="../CSS/indexstyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&family=Poppins&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="nav">
+    <h1>
+      <a href="../index.html" class="logo-link"><i class="fas fa-dumbbell"></i> BroTein Fitness</a>
+    </h1>
+
+    <!-- Hamburger menu icon -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li><a href="challenges.html">Challenges</a></li>
+      <li><a href="plan.html">Plans</a></li>
+      <li><a href="team.html">Our Team</a></li>
+      <li><a href="contact.html" class="active">Contact us</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero about-hero">
+    <div class="hero-text">
+      <h1>Contact Us</h1>
+      <h2>We're Here to Help!</h2>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+ <main class="contact-page contact-bg">
+  <div class="fullscreen-container">
+    <div class="fullscreen-card">
+      <h2>Get in Touch</h2>
+      <p>Have questions, feedback, or want to sign up for a plan? Drop us a message!</p>
+      <form class="contact-form" action="#" method="POST">
+        <div class="form-group">
+          <label for="name">Your Name *</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Your Email *</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your Message *</label>
+          <textarea id="message" name="message" rows="5" placeholder="Message..." required></textarea>
+        </div>
+
+        
+        <a href="../HTML/sent.html" class="button-link">Send Message</a>
+      </form>
+    </div>
+  </div>
+</main>
+
+  <script src="../JS/open.js"></script>
+
+  
+</body>
+</html>

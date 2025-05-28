@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thank You - BroTein Fitness</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      min-height: 100vh;
+      background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2)),
+                url('gymbg.jpg') no-repeat center center/cover;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 60px 20px;
+      color: white;
+    }
+
+    .nav {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 0 50px;  /* remove vertical padding for fixed height */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      height: 70px; /* fixed nav height */
+    }
+
+    .nav h1, .logo-link {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 28px;
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      height: 100%;       /* fill nav height */
+      line-height: 70px;  /* vertically center text */
+    }
+
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+      height: 100%;       /* fill nav height */
+      align-items: center; /* vertically center nav links */
+    }
+
+    .nav ul li a {
+      color: white;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.3s;
+      line-height: 70px; /* vertical center in nav */
+      display: inline-block;
+    }
+
+    .nav ul li a:hover {
+      color: #ffd700;
+    }
+
+    .hamburger {
+      display: none; /* hide for desktop */
+    }
+
+    .thankyou-card {
+      background-color: rgba(20, 20, 20, 0.85);
+      border-radius: 20px;
+      padding: 3rem 2.5rem;
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 12px 25px rgba(255, 255, 255, 0.1);
+      margin-top: 100px; /* avoid overlap with fixed nav */
+    }
+
+    .thankyou-card h1 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 3rem;
+      color: #ffd700;
+      margin-bottom: 1rem;
+    }
+
+    .thankyou-card p {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.6rem;
+      color: white;
+      margin-bottom: 2rem;
+    }
+
+    .back-home-btn {
+      background-color: #ffd700;
+      color: black;
+      padding: 0.5rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+    }
+
+    .back-home-btn:hover {
+      background-color: #e6be00;
+      color: black;
+    }
+
+    .footer {
+      background-color: rgba(0, 0, 0, 0.85);
+      color: white;
+      padding: 14px 0;
+      text-align: center;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-top: 40px;
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav {
+        padding: 0 20px;
+        height: 60px;
+      }
+      .nav h1, .logo-link {
+        font-size: 24px;
+        line-height: 60px;
+        height: 100%;
+      }
+      .nav ul {
+        gap: 15px;
+        height: 100%;
+      }
+      .nav ul li a {
+        line-height: 60px;
+      }
+      .thankyou-card {
+        padding: 2rem 1.5rem;
+        margin-top: 80px;
+      }
+      .thankyou-card h1 {
+        font-size: 2.2rem;
+      }
+      .thankyou-card p {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" role="navigation" aria-label="Primary Navigation">
+    <h1><a href="../index.html" class="logo-link">BroTein Fitness</a></h1>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../NAV/about.html">About us</a></li>
+      <li><a href="../NAV/challenges.html">Challenges</a></li>
+      <li><a href="../NAV/plan.html">Plans</a></li>
+      <li><a href="../NAV/team.html">Our Team</a></li>
+      <li><a href="../NAV/contact.html">Contact us</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="thankyou-card" role="main" aria-label="Thank You Message">
+      <h1>We've received your message.</h1>
+      <p>Thank you for reaching out! <br /> We appreciate your message and will get back to you soon.</p>
+      <a href="../index.html" class="back-home-btn">Back to Home</a>
+    </section>
+  </main>
+
+ 
+
+  <script src="../JS/open.js"></script>
+
+
+  <footer class="footer">
+    VISIT US AT <strong>BROTEIN.COM.PH</strong>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Team - BroTein Fitness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/teamstyle.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="nav">
+    <h1>
+      <a href="../index.html" class="logo-link"><i class="fa fa-dumbbell"></i>BroTein Fitness</a>
+    </h1>
+
+    <!-- Hamburger menu icon -->
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About us</a></li>
+      <li><a href="challenges.html">Challenges</a></li>
+      <li><a href="plan.html">Plans</a></li>
+      <li><a href="team.html" class="active">Our Team</a></li>
+      <li><a href="contact.html">Contact us</a></li>
+    </ul>
+  </div>
+
+  <h2 class="team-header">Our Team</h2>
+
+  <div class="team-container">
+    <div class="team-member" onclick="toggleBio(this)">
+      <img src="../beginner/jr.PNG" alt="Jimenez">
+      <h3>Ronad Jimenez</h3>
+      <p class="quote">"All progress takes place outside the comfort zone."</p>
+      <div class="bio">
+        <p>Coach Jimenez is a seasoned strength coach with over a decade of experience in powerlifting and hypertrophy training. Known for his no-nonsense style and precise programming, he has helped hundreds of clients gain muscle and build lasting discipline.</p>
+      </div>
+    </div>
+
+    <div class="team-member" onclick="toggleBio(this)">
+      <img src="../beginner/chard.JPG" alt="Limlingan">
+      <h3>Richard Limlingan</h3>
+      <p class="quote">"It is never too late to be what you might have been."</p>
+      <div class="bio">
+        <p>Coach Limlingan specializes in core development and functional training. With a background in calisthenics and martial arts, he helps improve posture, stability, and explosive strength. He’s known for sculpting impressive physiques using minimal equipment.</p>
+      </div>
+    </div>
+
+    <div class="team-member" onclick="toggleBio(this)">
+      <img src="../beginner/chris.jpg" alt="Acuzar">
+      <h3>Christopher Acuzar</h3>
+      <p class="quote">"Good, better, best. Never let it rest. Until your good is better and your better is best."</p>
+      <div class="bio">
+        <p>Coach Acuzar is an expert in bodybuilding and physique sculpting. He creates customized programs tailored to each client’s goals. With a keen eye for symmetry and precision, he's the go-to coach for clients seeking aesthetic results built on science and discipline.</p>
+      </div>
+    </div>
+
+    <div class="team-member" onclick="toggleBio(this)">
+      <img src="../beginner/rj.JPG" alt="Lacson">
+      <h3>RJ Aaron Lacson</h3>
+      <p class="quote">"Try your best and God will do the rest."</p>
+      <div class="bio">
+        <p>Coach Lacson specializes in high-intensity interval training (HIIT) and cardiovascular endurance. With a background in track and field, he brings intensity and structure to every session, helping clients push past limits while staying motivated and engaged.</p>
+      </div>
+    </div>
+
+    <div class="team-member" onclick="toggleBio(this)">
+      <img src="../beginner/ian.JPG" alt="Sana">
+      <h3>Ronald Ian Sana</h3>
+      <p class="quote">"The body achieves what the mind believes."</p>
+      <div class="bio">
+        <p>Coach Sana focuses on long-term transformation through habit-building, tailored workout plans, and sustainable nutrition. Calm and supportive, he empowers clients to stay consistent and achieve meaningful progress at their own pace.</p>
+      </div>
+    </div>
+  </div>
+  <script src="../JS/team.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="../JS/open.js"></script>
+
+</body>
+</html>

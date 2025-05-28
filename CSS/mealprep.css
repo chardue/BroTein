@@ -1,0 +1,323 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(30, 30, 30, 0.9));
+  color: white;
+  min-height: 100vh;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: rgba(0, 0, 0, 0.85);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.nav h1 i {
+  margin-right: 10px;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav ul li a {
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+  color: #ffd700;
+}
+
+.meal-container {
+  padding: 80px 40px 60px;
+  text-align: center;
+}
+
+.page-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 50px;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.page-subtitle {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 50px;
+}
+
+.meal-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.meal-card {
+  background-color: rgba(20, 20, 20, 0.9);
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 280px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meal-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px rgba(255, 215, 0, 0.4);
+}
+
+.meal-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.meal-card h3 {
+  font-size: 20px;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.meal-card p {
+  font-size: 14px;
+  color: #ddd;
+}
+
+.logo-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-link i {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.logo-link:hover {
+  color: #f97316;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Medium devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .nav {
+    padding: 15px 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 55px;
+  }
+
+  .hero-text h2 {
+    font-size: 36px;
+  }
+
+  .about-container {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .card h2 {
+    font-size: 28px;
+  }
+}
+
+/* Larger tablets and small desktops (768px and up) */
+@media (min-width: 768px) {
+  .about-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    flex: 1 1 300px;
+    max-width: 350px;
+  }
+}
+
+/* Very large screens (1200px and up) */
+@media (min-width: 1200px) {
+  .nav {
+    padding: 20px 80px;
+  }
+
+  .about-container {
+    max-width: 1000px;
+  }
+}
+
+/* Responsive Nav Links & Layout */
+
+/* Hide the nav links on small screens by default */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    top: 70px; /* height of navbar */
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+    z-index: 1001;
+
+    /* Hide menu by default */
+    display: none;
+  }
+
+  /* Show menu when active */
+  .nav ul.active {
+    display: flex;
+  }
+
+  .nav ul li a {
+    font-size: 18px;
+    display: block;
+  }
+
+  /* Hamburger icon styles */
+  .nav .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    justify-content: space-between;
+  }
+
+  .nav .hamburger span {
+    display: block;
+    height: 3px;
+    background: #f0f0f0;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+}
+
+/* Larger screens show nav links horizontally */
+@media (min-width: 769px) {
+  .nav ul {
+    display: flex !important;
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    flex-direction: row;
+    gap: 25px;
+    padding: 0;
+  }
+  
+  .nav .hamburger {
+    display: none;
+  }
+}
+
+/* ===== Responsive Styles ===== */
+
+/* Small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .nav {
+    padding: 15px 20px;
+  }
+
+  .nav ul {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .nav ul li a {
+    font-size: 14px;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+  }
+
+  .hero-text h2 {
+    font-size: 28px;
+  }
+
+  .hero-text button {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .about-container {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card h2 {
+    font-size: 24px;
+  }
+}
+
+.back-button {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.back-button a {
+    text-decoration: none;
+    color: #ffd700;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+
+.back-button a {
+    margin-top: 30px;
+    padding: 14px 30px;
+    font-size: 16px;
+    background-color: #ffd700;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+
+.nav ul li a.active {
+  color: #ffd700; /* or #facc15 for a gold/yellow highlight */
+  font-weight: 400;
+}

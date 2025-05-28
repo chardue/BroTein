@@ -1,0 +1,381 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hero {
+    background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.2)),
+                url('../beginner/gymbg.jpg') no-repeat center center;
+    background-size: cover; /* make image cover entire area */
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 100vh;  /* at least full viewport height */
+    height: auto;       /* allow grow with content */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;  /* space for fixed navbar */
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.nav h1 i {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav ul li a:hover {
+    color: #ffd700;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+    letter-spacing: 2px;
+}
+
+.hero-text h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 48px;
+    color: #ff7b00;
+    margin-top: -10px;
+}
+
+.hero-text button {
+    margin-top: 30px;
+    padding: 14px 30px;
+    font-size: 16px;
+    background-color: #ffd700;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.hero-text button:hover {
+    background-color: #e6be00;
+}
+
+.challenge-card p {
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    padding-top: 60px; 
+    padding-bottom: 60px; 
+}
+
+.challenges-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.challenge-card {
+    background-color: rgba(20, 20, 20, 0.85); /* Slightly lighter black for contrast */
+    padding: 40px; /* Increased padding for better spacing */
+    border-radius: 20px;
+    flex: 1;
+    min-width: 280px; /* Slightly wider */
+    max-width: 340px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 12px 25px rgba(255, 255, 255, 0.1); /* Light outer shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.challenge-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 14px 28px rgba(255, 215, 0, 0.5);
+}
+
+.challenge-card h3 {
+    font-size: 28px; /* Increased font size */
+    margin-bottom: 20px;
+    color: #ffd700;
+}
+
+.challenge-card p {
+    font-size: 16px; /* Increased font size */
+    line-height: 1.8;
+}
+
+
+.meal-btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #ffd700;
+    color: black;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.meal-btn:hover {
+    background-color: #e6be00;
+    text-decoration: none;
+}
+
+
+.footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 14px;
+      text-align: center;
+      color: #ffd700;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      z-index: 999;
+}
+
+
+.logo-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-link i {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.logo-link:hover {
+  color: #f97316;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Medium devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .nav {
+    padding: 15px 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 55px;
+  }
+
+  .hero-text h2 {
+    font-size: 36px;
+  }
+
+  .about-container {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  .card h2 {
+    font-size: 28px;
+  }
+}
+
+/* Larger tablets and small desktops (768px and up) */
+@media (min-width: 768px) {
+  .about-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    flex: 1 1 300px;
+    max-width: 350px;
+  }
+}
+
+/* Very large screens (1200px and up) */
+@media (min-width: 1200px) {
+  .nav {
+    padding: 20px 80px;
+  }
+
+  .about-container {
+    max-width: 1000px;
+  }
+}
+
+/* Responsive Nav Links & Layout */
+
+/* Hide the nav links on small screens by default */
+@media (max-width: 768px) {
+  .nav ul {
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    top: 70px; /* height of navbar */
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+    z-index: 1001;
+
+    /* Hide menu by default */
+    display: none;
+  }
+
+  /* Show menu when active */
+  .nav ul.active {
+    display: flex;
+  }
+
+  .nav ul li a {
+    font-size: 18px;
+    display: block;
+  }
+
+  /* Hamburger icon styles */
+  .nav .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    justify-content: space-between;
+  }
+
+  .nav .hamburger span {
+    display: block;
+    height: 3px;
+    background: #f0f0f0;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+}
+
+/* Larger screens show nav links horizontally */
+@media (min-width: 769px) {
+  .nav ul {
+    display: flex !important;
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    flex-direction: row;
+    gap: 25px;
+    padding: 0;
+  }
+  
+  .nav .hamburger {
+    display: none;
+  }
+}
+
+/* ===== Responsive Styles ===== */
+
+/* Small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .nav {
+    padding: 15px 20px;
+  }
+
+  .nav ul {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .nav ul li a {
+    font-size: 14px;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+  }
+
+  .hero-text h2 {
+    font-size: 28px;
+  }
+
+  .hero-text button {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .about-container {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card h2 {
+    font-size: 24px;
+  }
+}
+
+.nav ul li a.active {
+  color: #ffd700; /* or #facc15 for a gold/yellow highlight */
+  font-weight: 500;
+}
