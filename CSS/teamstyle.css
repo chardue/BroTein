@@ -160,6 +160,24 @@ a {
   cursor: pointer;
 }
 
+.meal-btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #ffd700;
+    color: black;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.meal-btn:hover {
+    background-color: #e6be00;
+    text-decoration: none;
+}
+
+
 /* Medium devices (tablets, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .nav {
